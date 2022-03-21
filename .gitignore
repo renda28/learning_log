@@ -5,3 +5,7 @@
 .dir-locals-2.el
 *.pyc
 __pycache__
+*.log
+*.pot
+*.pyc
+local_settings.py
