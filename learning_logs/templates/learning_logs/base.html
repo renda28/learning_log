@@ -5,6 +5,7 @@
   Hello, {{ user.username }}.
   <a href="{% url 'users_app:logout' %}">log out</a>
   {% else %}
+  <a href="{% url 'users_app:register' %}">register</a>
   <a href="{% url 'users_app:login' %}">log in</a>
   {% endif %}
 </p>
