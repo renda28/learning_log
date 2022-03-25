@@ -7,8 +7,6 @@
 
 {% block content %}
 
-<p>Add a new topic:</p>
-
 <form action="{% url 'learning-logs:new_topic' %}" method="post" class="form">
   {% csrf_token %}
   {% bootstrap_form form %}
