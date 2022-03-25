@@ -43,7 +43,18 @@
     </div>
   </nav>
 
-  
+  <div class="container">
+    <div class="page-header">
+      {% block header %}
+      {% endblock header%}
+    </div>
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+  </div><!-- /container -->
+
 </body>
 
 </html>
