@@ -7,16 +7,16 @@
 
 
 {% block content %}
+<div class="col-md-4">
+    <form method="post" action="{% url 'users_app:register' %}" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
 
-<form method="post" action="{% url 'users_app:register' %}" class="form">
-    {% csrf_token %}
-    {% bootstrap_form form %}
+        {% buttons %}
+        <button name="submit" class="btn btn-primary">register</button>
+        {% endbuttons %}
 
-    {% buttons %}
-    <button name="submit" class="btn btn-primary">register</button>
-    {% endbuttons %}
-
-    <input type="hidden" name="next" value="{% url 'learning-logs:index' %}" />
-</form>
-
+        <input type="hidden" name="next" value="{% url 'learning-logs:index' %}" />
+    </form>
+</div>
 {% endblock content %}
